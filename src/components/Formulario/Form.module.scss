@@ -1,0 +1,62 @@
+.novaTarefa {
+  display: flex;
+  flex-direction: column;
+  grid-area: nova-tarefa;
+  background-color: #7b8fa1;
+  border-radius: 8px;
+  box-shadow: 2px 4px 4px #0000009f;
+  padding: 32px 16px;
+
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 24px;
+
+    label {
+      margin-bottom: 8px;
+      font-size: 1.25rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 16px 8px;
+      box-sizing: border-box;
+      border: unset;
+      border-radius: 4px;
+      background-color: #567189;
+      box-shadow: 0px 2px 4px #2d2b2b9f inset;
+      cursor: pointer;
+
+      &::placeholder {
+        color: #bfbfbf;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 2.25rem;
+    padding: 24px;
+    box-sizing: border-box;
+
+    .inputContainer {
+      width: calc(60% - 12px);
+
+      &:last-of-type {
+        width: 40%;
+      }
+
+      label {
+        font-size: 2rem;
+      }
+
+      input {
+        height: 100%;
+        font-size: 1.75rem;
+      }
+    }
+  }
+}
